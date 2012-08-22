@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel.DataAnnotations;
+
+namespace MedtecMedical_App.Models
+{
+    [Table("Patient")]
+    public class Patient
+    {
+        [Key]
+        public int? PatientID { get; set; }
+        public int? PracticeID { get; set; }
+            [Required(ErrorMessage = "*")]
+        public int? ProviderID { get; set; }        
+          [Required(ErrorMessage = "*")]
+        public string PatientAcctNum { get; set; }
+           [Required(ErrorMessage = "*")]
+        public string FirstName { get; set; }
+           [Required(ErrorMessage = "*")]
+        public string LastName { get; set; }
+  
+        public string MiddleName { get; set; }
+         
+        public string Email { get; set; }
+             [Required(ErrorMessage = "*")]
+        public string PhoneNumber1 { get; set; }
+        
+        public string PhoneNumber2 { get; set; }
+            
+        public string Emergency_Contact_Num { get; set; }
+             [Required(ErrorMessage = "*")]
+        public int Age { get; set; }
+             [Required(ErrorMessage = "*")]
+        public string Sex { get; set; }
+             [Required(ErrorMessage = "*")]
+        public string Address1 { get; set; }
+         
+        public string Address2 { get; set; }
+             [Required(ErrorMessage = "*")]
+        public string City { get; set; }
+             [Required(ErrorMessage = "*")]
+        public string State { get; set; }
+             [Required(ErrorMessage = "*")]
+        public string Zip { get; set; }
+             [Required(ErrorMessage = "*")]
+             [DataType(DataType.Date)]
+        public DateTime Date_Of_Birth { get; set; }
+             [Required(ErrorMessage = "*")]
+        public string Insurance1ID { get; set; }
+       
+        public int? Sub1ID { get; set; }
+        
+        public string Sub1FirstName { get; set; }
+      
+        public string Sub1LastName { get; set; }
+           
+        public string Insurance2ID { get; set; }
+           
+        public int? Sub2ID { get; set; }
+          
+        public string Sub2FirstName { get; set; }
+          
+        public string Sub2LastName { get; set; }
+            
+        public string Insurance3ID { get; set; }
+            
+        public int? Sub3ID { get; set; }
+           
+        public string Sub3FirstName { get; set; }
+           
+        public string Sub3LastName { get; set; }
+             [Required(ErrorMessage = "*")]
+        public string HICN { get; set; }
+            
+        public int? Height { get; set; }
+           
+        public int? Weight { get; set; }
+          
+        public string Ptype { get; set; }
+           
+        public int? Guarantor1ID { get; set; }
+             
+        public int? Guarantor2ID { get; set; }
+           
+        public int? Guarantor3ID { get; set; }         
+        public byte[] Driver_Licence_Img { get; set; }
+            
+        public int? StatusID { get; set; }
+        public bool SelfPay { get; set; }
+        public string InsuranceType { get; set; }
+        //private int _visit;
+        //public int Visit
+        //{
+        //    get { return _visit; }
+        //    set { _visit = value; }
+        //}
+    }
+}

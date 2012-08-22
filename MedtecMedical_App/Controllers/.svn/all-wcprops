@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Web/!svn/ver/1842/MedtecMedical/MedtecMedical_App/Controllers
+END
+MessagesController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Web/!svn/ver/1853/MedtecMedical/MedtecMedical_App/Controllers/MessagesController.cs
+END
+MedtecMobilesServicesController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Web/!svn/ver/1860/MedtecMedical/MedtecMedical_App/Controllers/MedtecMobilesServicesController.cs
+END
+PracticeInfoController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/Web/!svn/ver/1796/MedtecMedical/MedtecMedical_App/Controllers/PracticeInfoController.cs
+END
+MedtecController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Web/!svn/ver/1824/MedtecMedical/MedtecMedical_App/Controllers/MedtecController.cs
+END
+PatientInfoController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Web/!svn/ver/1840/MedtecMedical/MedtecMedical_App/Controllers/PatientInfoController.cs
+END

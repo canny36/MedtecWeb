@@ -1,0 +1,127 @@
+html, body {background: url(../images/bg.gif) repeat-x top left #6bbbd4; margin: 0px; padding: 0px; font-family:Arial, Helvetica, sans-serif; color: #333; font-size:14px; height:100%; }
+
+#container {
+min-height: 100%;
+margin-bottom: -50px;
+position: relative;
+}
+
+#footer {
+height: 50px;
+position: relative;
+background:#0b3c4c; height:50px; line-height:50px; color:#fff; text-align:center; font-size:10px; margin-top:50px;
+ z-index:-1}
+
+.clearfooter {
+height: 50px;
+clear: both;
+}
+
+
+
+p{padding: 0 0 12px 0;margin: 0;}
+.clear{clear: both;}
+.pagewidth { width:985px; margin:0px auto 0px auto;}
+
+
+
+/*a.rolloverset {	display: block;	width: 120px; height: 44px;	text-decoration: none;	background:url(../Images/setup.gif);	}
+a.rolloverset:hover { background-position: -120px 0;}
+.displaceset {	position: absolute;	left: -5000px;}
+
+a.rolloverman {	display: block;	width: 190px; height: 44px;	text-decoration: none;	background:url(../Images/manage.gif)	}
+a.rolloverman:hover {	background-position: -190px 0;	}
+.displaceman {	position: absolute;	left: -5000px;	}
+
+a.rolloverbill {display: block;	width: 168px; height: 44px;	text-decoration: none;	background:url(../Images/billing.gif)	}
+a.rolloverbill:hover {	background-position: -168px 0;	}
+.displacebill {	position: absolute;	left: -5000px;	}
+
+a.rolloveralert {display: block; width: 118px; height: 44px; text-decoration: none;	background:url(../Images/alerts.gif)	}
+a.rolloveralert:hover {	background-position: -118px 0;	}
+.displacealert { position: absolute; left: -5000px;	}*/
+
+.name {font-size:14px; color:#ec2100; font-weight:bold;}
+.boxbg {background:url(../Images/boxbg.gif) repeat-y;}
+
+.practice {margin-left:31px; float:left;}
+
+#alerts { font-size:20px; color:#57b2cf; width:900px; margin:0px auto 0px auto; height:30px; text-align:center; line-height:30px; }
+.pname {color:#567883; font-size:18px; }
+.pnamered {color:#b64d00; font-size:18px;}
+
+.tabsleft { float:left; width:7px; height:44px; }
+.tabsright { float:left; width:7px; height:44px; }
+.tabsmid a { float:left; color:#FFFFFF; font-size:20px; text-decoration:none; height:44px; background:url(../Images/btn-midbg.gif) repeat-x top left; text-align:center; line-height:44px; padding:0px 10px 0px 10px;}
+.tabsmid a:hover { float:left; color:#FFFFFF; font-size:20px; text-decoration:none; height:44px; background:url(../Images/btn-midbg.gif) repeat-x top left; text-align:center; line-height:44px; padding:0px 10px 0px 10px;}
+
+
+.tabs-hleft { float:left; width:7px; height:44px; }
+.tabs-hright { float:left; width:7px; height:44px; }
+.tabs-hmid a { float:left; color:#FFFFFF; font-size:20px; text-decoration:none; height:44px; background:url(../Images/btn-hmidbg.gif) repeat-x top left; text-align:center; line-height:44px; padding:0px 10px 0px 10px;}
+.tabs-hmid a:hover { float:left; color:#FFFFFF; font-size:20px; text-decoration:none; height:44px; background:url(../Images/btn-hmidbg.gif) repeat-x top left; text-align:center; line-height:44px; padding:0px 10px 0px 10px;}
+
+
+/*table*/
+.maintbl { border:#c0c0c0 solid 1px; background:#fff; width:945px; margin:15px auto 15px auto;}
+.headrow {background:url(../Images/headrow.gif) repeat-x top left; height:53px; line-height:53px; color:#fff; font-size:16px; font-weight:bold;} 
+.headrow a {color:#fff; font-size:16px; font-weight:bold; text-decoration:none;}
+.headrow a:hover {color:#fff; font-size:16px; font-weight:bold; text-decoration:none;}  
+.headrow td { padding-left:10px;} 
+.row1 {background:url(../Images/row1bg.gif) repeat-x; height:53px;line-height:53px; }
+.row1 td { padding-left:8px; padding-right:2px; font-size:15px; color:#2a2a2a; }
+.row1 .email a{ padding-left:4px; font-size:15px;  color:#797979; text-decoration:none  }
+.row1 .email a:hover{ padding-left:4px; font-size:15px;  color:#797979;text-decoration:none  }
+
+.row2 {background:url(../Images/row2bg.gif) repeat-x; height:53px; line-height:53px;}
+.row2 td {padding-left:8px; padding-right:2px; font-size:15px; color:#2a2a2a;}
+
+
+
+
+
+/*popup css*/
+
+#blanket { background-color:#111; opacity: 0.20; filter:alpha(opacity=20); position:absolute; z-index: 9001; top:0px; left:0px; width:100%;}
+
+#popUpDiv {position:absolute; z-index: 9002;}
+
+#popUpDiv .top { background:url(../Images/popup-top.png) no-repeat; width:327px; height:10px;}
+#popUpDiv .midbg { background:url(../Images/popup-midbg.png) repeat-y; padding:10px;}
+#popUpDiv .bottom { background:url(../Images/popup-bottom.png) no-repeat; width:327px; height:10px;}
+#popUpDiv .close { margin:0px; background:url(../Images/popup-midbg.png) repeat-y; text-align:right; padding-right:10px;  }
+
+.popheading {color:#91caff; font-size:13px;}
+
+.popup {width:237px; color:#fff; font-size:16px; font-weight:bold;}
+.popup .midbg { background:url(../Images/popup-midbg.png) repeat-y;}
+.formfield { background:url(../Images/formbg.gif) repeat-x; height:32px; line-height:32px; border:0px; padding-left:5px;}
+.selectfield {  outline:none; height:23px; background:#dbe4e8; line-height:23px; border:0px; padding-left:5px; width:150px;}
+.right {text-align:right; padding-right:3px;}
+.popup .bottom { background:url(../Images/popup-bottom.png) no-repeat; width:327px; height:10px; line-height:10px;}
+
+
+
+/*login css*/
+
+.loginhead { font-size:20px; color:#FFFFFF;}
+.login {width:400px; margin:0px auto 0px auto;color:#567883; font-size:18px; text-align:left;}
+.loginfield {background:url(../Images/loginformbg.gif) repeat-x; border:#c1dce4 solid 1px; height:40px; line-height:40px; width:300px; padding-left:3px; font-size:14px;}
+.loginbtn {background:url(../Images/login.gif) no-repeat; width:167px; height:59px; color:#FFFFFF; font-size:28px; text-align:center; border:0px; cursor:pointer;}
+
+/* btns */
+.alert {background:url(../Images/alert-btnbg.gif) no-repeat; width:107px; height:37px; color:#FFFFFF; font-size:18px; text-align:center; border:0px; cursor:pointer;}
+.logout {background:url(../Images/logout-btnbg.gif) no-repeat;color:#FFFFFF; font-size:15px; padding:8px 30px 10px 21px; text-align:center; text-decoration:none; border:0px; cursor:pointer;}
+
+.orangebtn {background:url(../Images/orangebtn-bg.gif) no-repeat; width:83px; height:33px; text-align:center; color:#01182d; font-size:13px; font-weight:bold; border:0px; cursor:pointer;}
+
+
+/*sub tabs */
+#subtabs { width:141px; height:58px; line-height:58px; cursor:pointer; text-decoration:none; color:#fffefe; font-size:14px; font-weight:bold;}
+#subtabs a { background:url(../Images/subtabs.gif) no-repeat bottom; width:141px; height:58px;line-height:58px; cursor:pointer; text-decoration:none; color:#fffefe; font-size:14px; padding:25px 55px 20px 55px; font-weight:bold; }
+#subtabs a:hover { background:url(../Images/subtabs-hover.gif) no-repeat bottom; width:141px; height:58px; line-height:58px; text-decoration:none; cursor:pointer; color:#0047a1; font-size:14px; padding:25px 55px 20px 55px; font-weight:bold; }
+#subtabs .active { background:url(../Images/subtabs-hover.gif) no-repeat bottom; width:141px; height:58px;line-height:58px; text-decoration:none; cursor:pointer; color:#0047a1; font-size:14px; padding:25px 55px 20px 55px; font-weight:bold;}
+
+.tblscroll {overflow:scroll; width:966px; margin:auto}
+.gridfbg {background:url(../images/gridform-bg.jpg) repeat-x top left; height:26px; width:150px; line-height:26px; border:#d8d8d8 solid 1px; padding-left:3px;}
+

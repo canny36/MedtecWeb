@@ -1,0 +1,179 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel.DataAnnotations;
+
+namespace MedtecMedical_App.Models
+{
+      [Table("EquipmentAccessories")]
+    public class EquipmentAccessories
+    {
+        [Key]
+        public int AccessoryID { get; set; }
+
+        public string AccessoryName { get; set; }
+        public int EquipID { get; set; }
+        public string PartNumber { get; set; }
+        public int SupplyQuantity { get; set; }
+        public int QuantityonHand { get; set; }
+        public string Manufacturer { get; set; }
+        public int StatusID { get; set; }      
+          [NotMapped]
+        public string AccessoryTitle { get; set; }
+        public virtual Equipment equip { get; set; }
+          [NotMapped]
+        public bool IsValid { get; set; }
+          [NotMapped]
+          public int Quantity { get; set; }
+
+         
+    }
+}       
+
+
+
+
+//[Key]
+//        public int EncounterID { get; set; }
+
+//        public int PatientID { get; set; }
+
+//        [Required (ErrorMessage="*")]     
+//        public int EquipID { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          [DataType(DataType.Date)]
+//        public DateTime Date { get; set; }
+           
+//        public string Notes { get; set; }
+//          [Required(ErrorMessage = "*")]
+//        public string Equip_Options { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string Presc_Physician { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string Delivery_Method { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          [DataType(DataType.Date)]
+//        public DateTime Start_Refill_Date { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string Equip_Inspected_By { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          [DataType(DataType.Date)]
+//        public DateTime Equip_Deliv_Date { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string Facility_Name { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string Facility_Address { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string Diagnosis_Codes { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public int Est_Treatment_Dur { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string Equip_Serial_Num { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string Type_Of_Equip { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string Drug { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string HCPCS_Code { get; set; }
+//          [Required(ErrorMessage = "*")]
+//          public string J_Code { get; set; }
+            
+//        public byte[] Po_Patient_Sign { get; set; }
+            
+//             [DataType(DataType.Date)]
+//        public DateTime Po_Patient_Sign_Date { get; set; }
+            
+//        public byte[] Po_CompanyRep_Sign { get; set; }
+            
+//             [DataType(DataType.Date)]
+//        public DateTime Po_Company_Rep_Sign_Date { get; set; }
+//              [Required(ErrorMessage = "*")]
+//             [DataType(DataType.Date)]
+//        public DateTime Po_Equip_Received_Date { get; set; }
+            
+//        public byte[] Mcr_Beneficiary_Sign { get; set; }
+            
+//             [DataType(DataType.Date)]
+//        public DateTime Mcr_Beneficiary_Sign_Date { get; set; }
+//              [Required(ErrorMessage = "*")]
+//        public string Mcr_Beneficiary_Name { get; set; }
+             
+//        public string Mcr_Notes { get; set; }
+            
+//        public byte[] Pdr_Patient_Sign { get; set; }
+            
+//             [DataType(DataType.Date)]
+//        public DateTime Pdr_Patient_Sign_Date { get; set; }
+            
+//        public byte[] Pdr_Legalguardian_Sign { get; set; }
+            
+//        public string Pdr_Legalguardian_Name { get; set; }
+            
+//        public byte[] Pii_Patient_Sign { get; set; }
+            
+//             [DataType(DataType.Date)]
+//        public DateTime Pii_Patient_Sign_Date { get; set; }
+     
+//        public byte[] Pii_Legalguardian_Sign { get; set; }
+         
+//        public string Pii_Reason_PatientUnsign { get; set; }
+            
+//        public string Pii_Guardian_Relation { get; set; }
+    
+//        public string Pii_Guardian_Firstname { get; set; }
+     
+//        public string Pii_Guardian_Lastname { get; set; }
+         
+//        public string Pii_Guardian_Address1 { get; set; }
+           
+//              public string Pii_Guardian_Address2 { get; set; }
+             
+//              public string Pii_Guardian_City { get; set; }
+          
+//              public string Pii_Guardian_State { get; set; }
+     
+//              public string Pii_Guardian_Zip { get; set; }
+    
+//              public string Pii_Guardian_Email { get; set; }
+    
+//              public string Pii_Guardian_Phone { get; set; }
+            
+//        public byte[] Ptn_Physician_Sign { get; set; }
+            
+//             [DataType(DataType.Date)]
+//        public DateTime Ptn_Physician_Sign_Date { get; set; }
+//              [Required(ErrorMessage = "*")]
+//        public string Ptn_Physician_Name { get; set; }
+//              [Required(ErrorMessage = "*")]
+//        public int Ptn_Intravenous_Conti_Times { get; set; }
+//              [Required(ErrorMessage = "*")]
+//        public int Ptn_Intravenous_Conti_Days { get; set; }
+//              [Required(ErrorMessage = "*")]
+//        public bool Ptn_Continu_Administrat { get; set; }
+             
+//        public int? Ptn_Continu_Adminstrat_IFno { get; set; }
+//              [Required(ErrorMessage = "*")]
+//        public bool Ptn_Intravenous_Infusion { get; set; }
+//              [Required(ErrorMessage = "*")]
+//        public string Ptn_Presc_Of_Equip { get; set; }
+            
+//        public byte[] Dmeif_Supplier_Sign { get; set; }
+            
+//             [DataType(DataType.Date)]
+//        public DateTime Dmeif_Supplier_Sign_Date { get; set; }
+//              [Required(ErrorMessage = "*")]
+//             [DataType(DataType.Date)]
+//        public DateTime Dmeif_Initial_Date { get; set; }
+//              [Required(ErrorMessage = "*")]
+//             [DataType(DataType.Date)]
+//        public DateTime Dmeif_Revised_Date { get; set; }
+//              [Required(ErrorMessage = "*")]
+//             [DataType(DataType.Date)]
+//        public DateTime Dmeif_Recertification_Date { get; set; }
+            
+//        public int StatusID { get; set; }
+            
+//        public virtual Patient patnt { get; set; }
+            
+//        public virtual Equipment equip { get; set; }

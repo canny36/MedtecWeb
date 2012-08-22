@@ -1,0 +1,102 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using MedtecMedical_App.Models;
+
+namespace MedtecMedical_App.Controllers
+{
+    public class MessagesController : Controller
+    {
+        //
+        // GET: /Messages/
+          MedtecContext db;
+          public MessagesController()
+        {
+            db = new MedtecContext();
+        }
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Messages()
+        {
+            IEnumerable<vw_Messages> Enc;
+            var StatusID = 0;
+            var objEquip = (from v in db.StatusList
+                            where v.StatusID == 7 || v.StatusID == 8
+                            select v).ToList();
+            Status eq = new Status();
+            eq.StatusID = 4;
+            eq.StatusDesc = "All";
+            objEquip.Insert(0, eq);
+
+            if (Session["StatusID"] != null)
+            {               
+                StatusID = Convert.ToInt32(Session["StatusID"]);
+                Enc = (from p in db.vwMsg
+                         where  p.Status_ID == StatusID
+                         select p).ToList();
+         
+                if (StatusID == 4)
+                    Enc = (from v in db.vwMsg
+                           select v).ToList();
+                ViewBag.StatusID = new SelectList(objEquip, "StatusID", "StatusDesc", StatusID);          
+            
+            }
+            else
+            {
+                Enc = (from v in db.vwMsg
+                        select v).ToList();            
+                ViewBag.StatusID = new SelectList(objEquip, "StatusID", "StatusDesc", db.StatusList.First());                
+            }  
+            return View(Enc);
+        }
+
+        public ActionResult ddlEquipSelectionChanged(int EquipID)
+        {
+            Session["StatusID"] = EquipID;
+            return Json(new { data = "Success" });
+        }
+
+        public ActionResult GetMessages(int Encounter_ID)
+        {
+            var Msgs = (from v in db.Enc_Msg
+                            where v.Encounter_ID == Encounter_ID
+                            select new{v.Message_Desc,v.Message_ID}).ToList();
+            return Json(Msgs,JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult SaveMessage(int Message_ID, string Message_Desc)
+        {
+            Encounter_Messages enc = db.Enc_Msg.Find(Message_ID);
+            enc.Message_Desc = Message_Desc;
+            db.SaveChanges();
+            return Json("Success");
+        }
+
+        public ActionResult ResolveEncounterMessage(string EncounterIDs)
+        {
+            string[] EncounterID = EncounterIDs.Split(',');
+            for (int i = 0; i < EncounterID.Count(); i++)
+            {
+                //Encounter_Messages enc = db.Enc_Msg.Find(Convert.ToInt16(EncounterID[i]));    
+                int EncID = Convert.ToInt16(EncounterID[i]);
+              IEnumerable<Encounter_Messages> enc = (from k in db.Enc_Msg
+                                         where k.Encounter_ID == EncID
+                                         select k).ToList();
+              foreach (var m in enc)
+              {
+                  m.Status_ID = Convert.ToInt16((from v in db.StatusList
+                                                   where v.StatusDesc == "Resolved"
+                                                   select v.StatusID).ToList()[0]);           
+                db.SaveChanges();
+              }
+            }
+            return Json("");
+        }
+    }
+}

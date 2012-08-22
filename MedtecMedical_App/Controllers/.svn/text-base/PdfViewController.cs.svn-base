@@ -1,0 +1,102 @@
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="PdfViewController.cs" company="SemanticArchitecture">
+//   http://www.SemanticArchitecture.net pkalkie@gmail.com
+// </copyright>
+// <summary>
+//   Extends the controller with functionality for rendering PDF views
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace ReportManagement
+{
+    using System.Web.Mvc;
+   
+    using System.Text;
+   
+    using System.IO;
+    using System.Web.UI;
+    using Winnovative.WnvHtmlConvert;
+    using System;
+    using Winnovative.PdfCreator;
+    using System.Drawing;
+    using System.Web;
+    using System.Data;
+    using System.Configuration;
+    using System.Collections;
+    using System.Web.Security;
+    using System.Web.UI.WebControls;
+    using System.Web.UI.WebControls.WebParts;
+    using System.Web.UI.HtmlControls;
+
+
+
+    /// <summary>
+    /// Extends the controller with functionality for rendering PDF views
+    /// </summary>
+    public class PdfViewController : Controller
+    {
+        private readonly HtmlViewRenderer htmlViewRenderer;
+       
+
+        public PdfViewController()
+        {
+            this.htmlViewRenderer = new HtmlViewRenderer();          
+        }
+
+        protected string ViewPdf(string pageTitle, string viewName, object model, int EncID)
+        {           
+            string htmlText = this.htmlViewRenderer.RenderViewToString(this, viewName, model);
+           
+            LicensingManager.LicenseKey =
+"p7puTclbnKkiwDEBbqrmBOjMEWlhGRpUPyFudeNYQrrbiViiVgi6+DUR/DZCcJ3W"; 
+            Document document = new Document(); 
+            document.CompressionLevel = CompressionLevel.NormalCompression;      
+            document.Margins = new Margins(10, 10, 0, 0);     
+            document.Security.CanPrint = true;     
+            document.Security.UserPassword = "";    
+            document.DocumentInformation.Author = "HTML to PDF Converter";    
+            document.ViewerPreferences.HideToolbar = false;    
+            //Add a first page to the document. The next pages will inherit the            settings 
+            //from this page        
+            PdfPage page = document.Pages.AddNewPage(PageSize.A4, new Margins(10, 10, 0, 0), PageOrientation.Portrait);      
+            // add a font to the document that can be used for the texts elements
+                PdfFont font = document.Fonts.Add(new Font(new FontFamily("Times New Roman"), 10,GraphicsUnit.Point));   
+ 
+                float xLocation = 50;
+
+                float yLocation = 25;
+
+                float width = 600;
+
+                float height = -1;
+            // convert HTML to PDF      
+            HtmlToPdfElement htmlToPdfElement;    
+                // convert a HTML string to PDF          
+                string htmlStringToConvert =htmlText;       
+                //string baseURL = textBoxBaseURL.Text.Trim();         
+                htmlToPdfElement = new HtmlToPdfElement(xLocation, yLocation, width, height, htmlText.ToString(), null);
+                AddElementResult addResult;
+                addResult = page.AddElement(htmlToPdfElement);
+                string Path = Server.MapPath("~").ToString() + "pdfs/" + EncID + "_" + DateTime.Now.ToString("MM_dd_yyyy") + ".pdf";
+                string retPath =  EncID + "_" + DateTime.Now.ToString("MM_dd_yyyy") + ".pdf";
+                string savelocation = Path;
+               System.Web.HttpContext.Current.ApplicationInstance.CompleteRequest();
+               document.Save(Path);
+               return retPath;
+              // string name =System.IO.Path.GetFileName(Path);
+              //Response.ClearContent();
+              //  Response.ClearHeaders();
+              //  Response.ContentType = "application/pdf";
+              // Response.AppendHeader("content-disposition", "inline; filename=" + name);
+              //  Response.WriteFile(Path);
+              //  Response.End();
+              //  Response.Flush();
+              //  Response.Close();
+
+             
+
+                //ScriptManager.RegisterClientScriptBlock(null, this.GetType(), "script", "<script>alert();</script>", false);
+
+        }   
+        }       
+}

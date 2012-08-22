@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Web/!svn/ver/1844/MedtecMedical/MedtecMedical_App/Models
+END
+PatientVisits.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Web/!svn/ver/1861/MedtecMedical/MedtecMedical_App/Models/PatientVisits.cs
+END
+vw_Messages.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Web/!svn/ver/1854/MedtecMedical/MedtecMedical_App/Models/vw_Messages.cs
+END
+MedtecContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/Web/!svn/ver/1862/MedtecMedical/MedtecMedical_App/Models/MedtecContext.cs
+END
+Encounter_Messages.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/Web/!svn/ver/1841/MedtecMedical/MedtecMedical_App/Models/Encounter_Messages.cs
+END
+vwSearchPatients.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Web/!svn/ver/1843/MedtecMedical/MedtecMedical_App/Models/vwSearchPatients.cs
+END
+vwTodaySchedule.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Web/!svn/ver/1861/MedtecMedical/MedtecMedical_App/Models/vwTodaySchedule.cs
+END
+PatientEncounters.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/Web/!svn/ver/1863/MedtecMedical/MedtecMedical_App/Models/PatientEncounters.cs
+END
+Patient.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Web/!svn/ver/1863/MedtecMedical/MedtecMedical_App/Models/Patient.cs
+END
+MessageCls.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Web/!svn/ver/1826/MedtecMedical/MedtecMedical_App/Models/MessageCls.cs
+END
+vwEquipmentAccessories.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Web/!svn/ver/1863/MedtecMedical/MedtecMedical_App/Models/vwEquipmentAccessories.cs
+END
+vwPdfGenEncounterInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/Web/!svn/ver/1799/MedtecMedical/MedtecMedical_App/Models/vwPdfGenEncounterInfo.cs
+END
+EquipmentAccessories.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/Web/!svn/ver/1838/MedtecMedical/MedtecMedical_App/Models/EquipmentAccessories.cs
+END
+vwBillerMessages.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/Web/!svn/ver/1861/MedtecMedical/MedtecMedical_App/Models/vwBillerMessages.cs
+END
